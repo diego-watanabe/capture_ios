@@ -1,22 +1,22 @@
 //
-//  LoadingViewController.m
+//  PermissionsViewController.m
 //  capture
 //
-//  Created by Diego Watanabe on 4/13/15.
+//  Created by Diego Watanabe on 5/2/15.
 //  Copyright (c) 2015 blorgod. All rights reserved.
 //
 
-#import "LoadingViewController.h"
+#import "PermissionsViewController.h"
 
-@interface LoadingViewController ()
+@interface PermissionsViewController ()
 
 @end
 
-@implementation LoadingViewController
+@implementation PermissionsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self performSelector:@selector(showPanicViewController) withObject:nil afterDelay:5.0];
+    defaults = [NSUserDefaults standardUserDefaults];
     // Do any additional setup after loading the view.
 }
 
@@ -24,9 +24,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)showPanicViewController{
-    [self performSegueWithIdentifier:@"panic" sender:self];
-}
+
 /*
 #pragma mark - Navigation
 
@@ -37,4 +35,10 @@
 }
 */
 
+- (IBAction)captureTouchUpInside:(id)sender {
+    emotionalState = _emotionalStateString.text;
+    brandPreferences = _brandPreferencesString.text;
+    [defaults setObject:emotionalState forKey:@"emotion"];
+    [defaults setObject:brandPreferences forKey:@"brand"];
+}
 @end

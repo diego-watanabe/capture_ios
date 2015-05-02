@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self performSelector:@selector(showPermissionViewController) withObject:nil afterDelay:5.0];
     // Do any additional setup after loading the view.
 }
 
@@ -23,7 +24,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)showPermissionViewController{
+    [self performSegueWithIdentifier:@"permission" sender:self];
+}
 /*
 #pragma mark - Navigation
 

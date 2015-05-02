@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 blorgod. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CaptureViewController.h"
 
-@interface ViewController ()
+@interface CaptureViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CaptureViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,3 +25,4 @@
 }
 
 @end
+
