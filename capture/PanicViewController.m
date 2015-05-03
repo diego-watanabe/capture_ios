@@ -16,6 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    UIView *topView = window.rootViewController.view;
+    topView.alpha = 0;
+    
+    
+    [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
+        topView.alpha = 1;
+    } completion:nil];
     [self performSelector:@selector(showPermissionViewController) withObject:nil afterDelay:5.0];
     // Do any additional setup after loading the view.
 }

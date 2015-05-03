@@ -36,4 +36,19 @@
 }
 */
 
+- (IBAction)userButtonTouchUpInside:(id)sender {
+    _displayDetails.hidden = NO;
+    _displayDetails.backgroundColor = [UIColor greenColor];
+}
+- (IBAction)networkButtonTouchUpInside:(id)sender {
+}
+
+- (IBAction)exitDetailsTouchUpInside:(id)sender {
+    _displayDetails.hidden = YES;
+}
+- (IBAction)captureButtonTouchUpInside:(id)sender {
+}
+
+- (IBAction)storeButtonTouchUpInside:(id)sender {
+}
 @end

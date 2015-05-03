@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PanicViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *kernelText;
 
 @end
