@@ -48,6 +48,13 @@ didFinishScalingCapturedImage:(FastttCapturedImage *)capturedImage
      *  Here, capturedImage.scaledImage contains the scaled-down version
      *  of the image.
      */
+    NSData *imgData = UIImageJPEGRepresentation(capturedImage.scaledImage, 1); // 1 is compression quality
+    
+    // Identify the home directory and file name
+    NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Test.jpg"];
+    
+    // Write the file.  Choose YES atomically to enforce an all or none write. Use the NO flag if partially written files are okay which can occur in cases of corruption
+    [imgData writeToFile:jpgPath atomically:YES];
     [self performSegueWithIdentifier:@"toWarning" sender:self];
 }
 

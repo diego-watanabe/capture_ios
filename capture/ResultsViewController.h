@@ -33,7 +33,15 @@
     NSString *version;
     NSString *serial;
     NSString *model;
+    NSString *fileSize;
+    NSString *brands;
+    NSString *mac;
+    NSString *externalIP;
+    NSString *internalIP;
+    NSString *carrierName;
 }
+@property (weak, nonatomic) IBOutlet UITextView *longtext;
+@property (weak, nonatomic) IBOutlet UILabel *label11;
 
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
