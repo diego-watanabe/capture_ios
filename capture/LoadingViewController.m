@@ -16,8 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _progressBar.progress = 0.0;
+    _progressValue = 0.0f;
+    [self increaseProgressValue];
     [self performSelector:@selector(showPanicViewController) withObject:nil afterDelay:5.0];
     // Do any additional setup after loading the view.
+}
+-(void)increaseProgressValue{
+    if(_progressBar.progress<1)
+    {
+        
+        _progressValue = _progressValue+0.1;
+        
+        _progressBar.progress = _progressValue;
+        
+        [self performSelector:@selector(increaseProgressValue) withObject:self afterDelay:0.2];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,6 +42,7 @@
 - (void)showPanicViewController{
     [self performSegueWithIdentifier:@"panic" sender:self];
 }
+
 /*
 #pragma mark - Navigation
 

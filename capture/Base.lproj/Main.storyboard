@@ -268,6 +268,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="progressBar" destination="REP-r2-VgH" id="pIq-90-Bf7"/>
                         <segue destination="D5I-OE-0Cx" kind="presentation" identifier="panic" modalTransitionStyle="crossDissolve" id="0zm-Bl-BqW"/>
                     </connections>
                 </viewController>

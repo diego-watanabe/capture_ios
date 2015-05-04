@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LoadingViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
+@property (nonatomic) float progressValue;
 @end
