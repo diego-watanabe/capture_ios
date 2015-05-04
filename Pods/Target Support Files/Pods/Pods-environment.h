@@ -18,3 +18,27 @@
 #define COCOAPODS_VERSION_MINOR_ALSystemUtilities_no_arc 0
 #define COCOAPODS_VERSION_PATCH_ALSystemUtilities_no_arc 0
 
+// FastttCamera
+#define COCOAPODS_POD_AVAILABLE_FastttCamera
+#define COCOAPODS_VERSION_MAJOR_FastttCamera 0
+#define COCOAPODS_VERSION_MINOR_FastttCamera 2
+#define COCOAPODS_VERSION_PATCH_FastttCamera 9
+
+// FastttCamera/Default
+#define COCOAPODS_POD_AVAILABLE_FastttCamera_Default
+#define COCOAPODS_VERSION_MAJOR_FastttCamera_Default 0
+#define COCOAPODS_VERSION_MINOR_FastttCamera_Default 2
+#define COCOAPODS_VERSION_PATCH_FastttCamera_Default 9
+
+// GlitchKit
+#define COCOAPODS_POD_AVAILABLE_GlitchKit
+#define COCOAPODS_VERSION_MAJOR_GlitchKit 0
+#define COCOAPODS_VERSION_MINOR_GlitchKit 0
+#define COCOAPODS_VERSION_PATCH_GlitchKit 3
+
+// TGCameraViewController
+#define COCOAPODS_POD_AVAILABLE_TGCameraViewController
+#define COCOAPODS_VERSION_MAJOR_TGCameraViewController 2
+#define COCOAPODS_VERSION_MINOR_TGCameraViewController 0
+#define COCOAPODS_VERSION_PATCH_TGCameraViewController 1
+

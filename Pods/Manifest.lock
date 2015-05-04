@@ -2,11 +2,22 @@ PODS:
   - ALSystemUtilities (1.0):
     - ALSystemUtilities/no-arc (= 1.0)
   - ALSystemUtilities/no-arc (1.0)
+  - FastttCamera (0.2.9):
+    - FastttCamera/Default (= 0.2.9)
+  - FastttCamera/Default (0.2.9)
+  - GlitchKit (0.0.3)
+  - TGCameraViewController (2.0.1)
 
 DEPENDENCIES:
   - ALSystemUtilities
+  - FastttCamera
+  - GlitchKit
+  - TGCameraViewController
 
 SPEC CHECKSUMS:
   ALSystemUtilities: bc0e5459d80dee83eea615a88267f385d6f1aa2d
+  FastttCamera: bd173337377bcf4f1fb698bab3362fcf2914039c
+  GlitchKit: 2b94c80b75a3b6cffa2502fa04d928b749b72a4a
+  TGCameraViewController: 319a4809cd244186eb709d3319c832f29ed76591
 
 COCOAPODS: 0.36.4

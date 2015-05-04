@@ -10,6 +10,10 @@
 
 @interface CaptureViewController : UIViewController
 
+- (IBAction)cameraButtonTouch:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *pictureView;
+
+
 
 @end
 

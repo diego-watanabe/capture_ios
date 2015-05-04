@@ -42,25 +42,10 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLC-bT-X1L">
                                 <rect key="frame" x="0.0" y="70" width="600" height="394"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="alfredo" translatesAutoresizingMaskIntoConstraints="NO" id="sMN-3D-4ds">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="sMN-3D-4ds" secondAttribute="bottom" constant="44" id="CaV-bZ-Mgb"/>
-                                    <constraint firstAttribute="centerY" secondItem="sMN-3D-4ds" secondAttribute="centerY" constant="22" id="EZg-Vi-P4k"/>
-                                    <constraint firstAttribute="width" secondItem="sMN-3D-4ds" secondAttribute="width" id="SBP-Dk-SiS"/>
-                                    <constraint firstAttribute="centerX" secondItem="sMN-3D-4ds" secondAttribute="centerX" id="hyK-rZ-9Hz"/>
                                     <constraint firstAttribute="height" constant="394" id="qB0-d7-sUT"/>
-                                    <constraint firstAttribute="height" secondItem="sMN-3D-4ds" secondAttribute="height" id="vp5-R2-cUT"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="vp5-R2-cUT"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFc-va-gUP">
                                 <rect key="frame" x="0.0" y="480" width="600" height="120"/>
@@ -83,7 +68,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Kvi-V8-h37" kind="presentation" modalTransitionStyle="crossDissolve" id="UgV-KU-lYh"/>
+                                            <action selector="cameraButtonTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yW8-nZ-e79"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -104,12 +89,18 @@
                                     <constraint firstAttribute="trailing" secondItem="L1h-nE-RBp" secondAttribute="trailing" constant="70" id="wLG-V4-Z2v"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4R-Gf-L9A">
+                                <rect key="frame" x="0.0" y="82" width="600" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="RLC-bT-X1L" secondAttribute="centerY" constant="212" id="2qH-Ae-1E0"/>
                             <constraint firstAttribute="centerY" secondItem="RLC-bT-X1L" secondAttribute="centerY" constant="212" id="2sg-VM-uah"/>
+                            <constraint firstItem="T4R-Gf-L9A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="8Nk-YA-bfx"/>
                             <constraint firstAttribute="centerX" secondItem="Bp8-9b-O5p" secondAttribute="centerX" id="8R5-0m-N2X"/>
+                            <constraint firstItem="Bp8-9b-O5p" firstAttribute="top" secondItem="T4R-Gf-L9A" secondAttribute="top" constant="-62" id="8Y5-bx-ObT"/>
                             <constraint firstAttribute="centerX" secondItem="DFc-va-gUP" secondAttribute="centerX" id="BaB-Lw-K1G"/>
                             <constraint firstItem="DFc-va-gUP" firstAttribute="top" secondItem="RLC-bT-X1L" secondAttribute="top" constant="410" id="E3Z-oO-766"/>
                             <constraint firstItem="RLC-bT-X1L" firstAttribute="leading" secondItem="Bp8-9b-O5p" secondAttribute="leading" id="Ebf-1d-Smq"/>
@@ -117,6 +108,8 @@
                             <constraint firstItem="DFc-va-gUP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="L7G-V3-m9e"/>
                             <constraint firstAttribute="centerX" secondItem="RLC-bT-X1L" secondAttribute="centerX" id="McY-Rx-YYA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DFc-va-gUP" secondAttribute="bottom" id="UYY-2i-JFe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T4R-Gf-L9A" secondAttribute="trailing" constant="-16" id="UnQ-tp-5bE"/>
+                            <constraint firstItem="T4R-Gf-L9A" firstAttribute="centerY" secondItem="RLC-bT-X1L" secondAttribute="centerY" constant="2.5" id="hxV-gC-1gX"/>
                             <constraint firstItem="Bp8-9b-O5p" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="jZC-61-B8P"/>
                             <constraint firstItem="Bp8-9b-O5p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nnI-2Q-ng3"/>
                         </constraints>
@@ -127,10 +120,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="pictureView" destination="T4R-Gf-L9A" id="ero-cJ-AC1"/>
+                        <segue destination="Kvi-V8-h37" kind="presentation" identifier="toWarning" modalTransitionStyle="crossDissolve" id="O03-2S-9tS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2465" y="1106"/>
+            <point key="canvasLocation" x="2183" y="1140"/>
         </scene>
         <!--warningScreen-->
         <scene sceneID="KNR-nI-OxF">
@@ -222,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOs-02-S3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="334"/>
+            <point key="canvasLocation" x="1418" y="1156"/>
         </scene>
         <!--pleaseWait-->
         <scene sceneID="oQx-VN-nDH">
@@ -583,6 +580,9 @@
                                 <state key="normal" image="image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="imageButtonTouchUpInside:" destination="Hkh-so-E3q" eventType="touchUpInside" id="bcQ-hi-m4d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smq-8B-XVl">
                                 <rect key="frame" x="275" y="530" width="51" height="50"/>
@@ -599,17 +599,17 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="svH-ab-jEn"/>
                                 </connections>
                             </button>
-                            <view alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2J-bV-Zgy">
-                                <rect key="frame" x="151" y="159" width="300" height="300"/>
+                            <view alpha="0.89999999999999991" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2J-bV-Zgy">
+                                <rect key="frame" x="126" y="159" width="350" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details Popup Title: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP4-iu-jkO">
                                         <rect key="frame" x="8" y="34" width="215" height="20"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xl-XR-Wf8">
-                                        <rect key="frame" x="262" y="8" width="30" height="36"/>
+                                        <rect key="frame" x="312" y="8" width="30" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="X">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -619,15 +619,200 @@
                                             <action selector="exitDetailsTouchUpInside:" destination="Hkh-so-E3q" eventType="touchUpInside" id="NUK-sN-0mG"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9d-Lv-ON0">
+                                        <rect key="frame" x="8" y="88" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfk-25-ESW">
+                                        <rect key="frame" x="8" y="105" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRr-FU-RVm">
+                                        <rect key="frame" x="8" y="122" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVQ-0Q-eMc">
+                                        <rect key="frame" x="8" y="139" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEw-Sa-mL4">
+                                        <rect key="frame" x="8" y="156" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrb-2A-xci">
+                                        <rect key="frame" x="8" y="175" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOo-KM-AqB">
+                                        <rect key="frame" x="8" y="193" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtQ-kq-elI">
+                                        <rect key="frame" x="8" y="211" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAq-Fk-6Oz">
+                                        <rect key="frame" x="8" y="229" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz5-V8-6n0">
+                                        <rect key="frame" x="8" y="247" width="60" height="17"/>
+                                        <color key="tintColor" red="0.98431372549019602" green="0.0" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="768-91-WwE">
+                                        <rect key="frame" x="282" y="88" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0X-0a-zSY">
+                                        <rect key="frame" x="282" y="104" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fti-fd-5Xa">
+                                        <rect key="frame" x="282" y="105" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ox-Pu-eIx">
+                                        <rect key="frame" x="282" y="122" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-qr-5zq">
+                                        <rect key="frame" x="282" y="139" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksz-Ei-Doz">
+                                        <rect key="frame" x="282" y="156" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rk-cm-ID2">
+                                        <rect key="frame" x="282" y="175" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h23-dE-qtk">
+                                        <rect key="frame" x="282" y="193" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efY-5Y-x1L">
+                                        <rect key="frame" x="282" y="211" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIf-Rr-NqT">
+                                        <rect key="frame" x="282" y="229" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9g-P1-s59">
+                                        <rect key="frame" x="282" y="247" width="60" height="17"/>
+                                        <color key="tintColor" red="0.98431372549999996" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431372549021" green="0.58431372549019611" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="ChC-hq-l7Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="5rk-cm-ID2" secondAttribute="trailing" constant="8" id="2PF-6Y-F0a"/>
+                                    <constraint firstAttribute="trailing" secondItem="fti-fd-5Xa" secondAttribute="trailing" constant="8" id="4hO-bG-lbV"/>
+                                    <constraint firstItem="xRr-FU-RVm" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="122" id="6jI-Sa-JfO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wfk-25-ESW" secondAttribute="trailing" constant="8" id="7RL-4L-bWt"/>
+                                    <constraint firstAttribute="trailing" secondItem="768-91-WwE" secondAttribute="trailing" constant="8" id="84M-sw-Qwe"/>
+                                    <constraint firstItem="qrb-2A-xci" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="175" id="9fm-IJ-btU"/>
+                                    <constraint firstAttribute="trailing" secondItem="CVQ-0Q-eMc" secondAttribute="trailing" constant="282" id="A4n-aM-Djz"/>
+                                    <constraint firstItem="sIf-Rr-NqT" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="229" id="BLa-V6-9xa"/>
+                                    <constraint firstAttribute="width" constant="350" id="ChC-hq-l7Z"/>
+                                    <constraint firstItem="tEw-Sa-mL4" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="156" id="FrB-AF-Uw0"/>
+                                    <constraint firstItem="hz5-V8-6n0" firstAttribute="leading" secondItem="F2J-bV-Zgy" secondAttribute="leading" constant="8" id="G5Y-oH-8gh"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ox-Pu-eIx" secondAttribute="trailing" constant="8" id="G5d-cz-GsF"/>
                                     <constraint firstItem="nP4-iu-jkO" firstAttribute="leading" secondItem="F2J-bV-Zgy" secondAttribute="leading" constant="8" id="NMG-Ec-ic5"/>
+                                    <constraint firstItem="i9d-Lv-ON0" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="88" id="OJa-7G-ahB"/>
+                                    <constraint firstItem="h23-dE-qtk" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="193" id="ORn-lg-1pl"/>
+                                    <constraint firstAttribute="trailing" secondItem="efY-5Y-x1L" secondAttribute="trailing" constant="8" id="PzK-4y-qjv"/>
+                                    <constraint firstItem="pAq-Fk-6Oz" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="229" id="QQG-9U-LRn"/>
                                     <constraint firstItem="0xl-XR-Wf8" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="8" id="R5h-Oc-rzN"/>
+                                    <constraint firstItem="CVQ-0Q-eMc" firstAttribute="leading" secondItem="F2J-bV-Zgy" secondAttribute="leading" constant="8" id="UTq-79-oc1"/>
+                                    <constraint firstAttribute="trailing" secondItem="xRr-FU-RVm" secondAttribute="trailing" constant="282" id="V5j-d5-93G"/>
+                                    <constraint firstItem="tEw-Sa-mL4" firstAttribute="leading" secondItem="F2J-bV-Zgy" secondAttribute="leading" constant="8" id="VxL-1t-3tQ"/>
+                                    <constraint firstItem="Wfk-25-ESW" firstAttribute="leading" secondItem="F2J-bV-Zgy" secondAttribute="leading" constant="8" id="a5C-tk-vgS"/>
+                                    <constraint firstAttribute="trailing" secondItem="c5S-qr-5zq" secondAttribute="trailing" constant="8" id="ah0-bb-vyi"/>
+                                    <constraint firstAttribute="trailing" secondItem="qrb-2A-xci" secondAttribute="trailing" constant="282" id="cX3-dB-kXI"/>
+                                    <constraint firstAttribute="trailing" secondItem="J0X-0a-zSY" secondAttribute="trailing" constant="8" id="d79-ew-zwl"/>
+                                    <constraint firstItem="Wfk-25-ESW" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="105" id="dIZ-Ym-Jiu"/>
+                                    <constraint firstItem="CVQ-0Q-eMc" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="139" id="hEf-6V-r26"/>
+                                    <constraint firstItem="i9d-Lv-ON0" firstAttribute="leading" secondItem="F2J-bV-Zgy" secondAttribute="leading" constant="8" id="j2A-Qr-aBV"/>
                                     <constraint firstItem="nP4-iu-jkO" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="34" id="k5P-u8-gMp"/>
+                                    <constraint firstItem="5rk-cm-ID2" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="175" id="lIf-vJ-vfv"/>
                                     <constraint firstAttribute="trailing" secondItem="0xl-XR-Wf8" secondAttribute="trailing" constant="8" id="n8d-WT-vJQ"/>
+                                    <constraint firstItem="pAq-Fk-6Oz" firstAttribute="leading" secondItem="F2J-bV-Zgy" secondAttribute="leading" constant="8" id="oZW-9s-XhK"/>
+                                    <constraint firstItem="c5S-qr-5zq" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="139" id="olq-cW-tId"/>
+                                    <constraint firstAttribute="trailing" secondItem="sIf-Rr-NqT" secondAttribute="trailing" constant="8" id="pKH-et-Cq1"/>
+                                    <constraint firstItem="ksz-Ei-Doz" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="156" id="pt2-As-TcP"/>
+                                    <constraint firstItem="xRr-FU-RVm" firstAttribute="leading" secondItem="F2J-bV-Zgy" secondAttribute="leading" constant="8" id="pyL-zS-aQ2"/>
+                                    <constraint firstItem="3ox-Pu-eIx" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="122" id="qbb-dP-k5W"/>
+                                    <constraint firstItem="qrb-2A-xci" firstAttribute="leading" secondItem="F2J-bV-Zgy" secondAttribute="leading" constant="8" id="qtt-e4-yIM"/>
+                                    <constraint firstItem="768-91-WwE" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="88" id="r2r-Ln-lCf"/>
+                                    <constraint firstItem="hz5-V8-6n0" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="247" id="sVv-Jh-kWp"/>
+                                    <constraint firstItem="k9g-P1-s59" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="247" id="sov-5O-iP2"/>
+                                    <constraint firstItem="fti-fd-5Xa" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="105" id="tyV-TM-Rx3"/>
+                                    <constraint firstItem="J0X-0a-zSY" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="104" id="uw2-CZ-qAY"/>
+                                    <constraint firstAttribute="trailing" secondItem="i9d-Lv-ON0" secondAttribute="trailing" constant="8" id="vb1-4t-10h"/>
+                                    <constraint firstAttribute="trailing" secondItem="k9g-P1-s59" secondAttribute="trailing" constant="8" id="vbc-Ja-Qmu"/>
+                                    <constraint firstAttribute="trailing" secondItem="ksz-Ei-Doz" secondAttribute="trailing" constant="8" id="xZu-n7-1yZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="h23-dE-qtk" secondAttribute="trailing" constant="8" id="yK6-kn-SE8"/>
+                                    <constraint firstItem="efY-5Y-x1L" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="top" constant="211" id="yiL-WR-z9H"/>
+                                    <constraint firstAttribute="trailing" secondItem="tEw-Sa-mL4" secondAttribute="trailing" constant="282" id="zON-QD-kAN"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="fti-fd-5Xa"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="vb1-4t-10h"/>
+                                        <exclude reference="7RL-4L-bWt"/>
+                                        <exclude reference="V5j-d5-93G"/>
+                                        <exclude reference="A4n-aM-Djz"/>
+                                        <exclude reference="zON-QD-kAN"/>
+                                        <exclude reference="cX3-dB-kXI"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -659,10 +844,30 @@
                     </view>
                     <connections>
                         <outlet property="captureButton" destination="cOj-Mk-Rhc" id="qiF-cz-Bwe"/>
+                        <outlet property="detailsTitleLabel" destination="nP4-iu-jkO" id="oYi-5O-BuV"/>
                         <outlet property="displayDetails" destination="F2J-bV-Zgy" id="a9b-c4-tII"/>
                         <outlet property="imageButton" destination="F2J-bV-Zgy" id="G30-KN-us3"/>
-                        <outlet property="imageButtonTouchUpInside" destination="WDk-bU-2CR" id="ujH-fM-f7H"/>
+                        <outlet property="label1" destination="i9d-Lv-ON0" id="T09-Q6-ZUG"/>
+                        <outlet property="label10" destination="hz5-V8-6n0" id="oQT-iG-eKw"/>
+                        <outlet property="label2" destination="Wfk-25-ESW" id="g8C-vs-LB6"/>
+                        <outlet property="label3" destination="xRr-FU-RVm" id="ZAG-pJ-Rsr"/>
+                        <outlet property="label4" destination="CVQ-0Q-eMc" id="uiO-U9-16L"/>
+                        <outlet property="label5" destination="tEw-Sa-mL4" id="1fY-lT-8a1"/>
+                        <outlet property="label6" destination="qrb-2A-xci" id="5bA-QG-63F"/>
+                        <outlet property="label7" destination="hOo-KM-AqB" id="SXh-Mx-zek"/>
+                        <outlet property="label8" destination="PtQ-kq-elI" id="zfE-fn-PXC"/>
+                        <outlet property="label9" destination="pAq-Fk-6Oz" id="a9p-ax-f7g"/>
                         <outlet property="networkButton" destination="gL9-9u-xHf" id="JnX-uZ-oFW"/>
+                        <outlet property="result1" destination="768-91-WwE" id="4mU-tJ-FI4"/>
+                        <outlet property="result10" destination="k9g-P1-s59" id="9k6-g3-eaU"/>
+                        <outlet property="result2" destination="J0X-0a-zSY" id="74Y-r7-1nO"/>
+                        <outlet property="result3" destination="3ox-Pu-eIx" id="x6m-kN-Cw9"/>
+                        <outlet property="result4" destination="c5S-qr-5zq" id="aGL-Vp-AoF"/>
+                        <outlet property="result5" destination="ksz-Ei-Doz" id="saW-sc-ZYu"/>
+                        <outlet property="result6" destination="5rk-cm-ID2" id="Clu-VO-W8f"/>
+                        <outlet property="result7" destination="h23-dE-qtk" id="RJJ-f4-whz"/>
+                        <outlet property="result8" destination="efY-5Y-x1L" id="DrD-B2-f0q"/>
+                        <outlet property="result9" destination="sIf-Rr-NqT" id="mZN-1I-93F"/>
                         <outlet property="storeButton" destination="iaw-mq-tnX" id="fLO-Gt-Mxo"/>
                         <outlet property="userButton" destination="WkQ-Hl-tdx" id="0D7-il-Pm5"/>
                     </connections>
@@ -673,7 +878,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="alfredo" width="375" height="363"/>
         <image name="cap" width="47" height="41"/>
         <image name="capture2" width="150" height="150"/>
         <image name="capture_button" width="66" height="66"/>
@@ -695,5 +899,5 @@
         <image name="turn_camera_icon" width="28" height="21"/>
         <image name="user" width="46" height="41"/>
     </resources>
-    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.98431372549019602" green="0.0" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
 </document>

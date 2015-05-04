@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ALSystemUtilities"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ALSystemUtilities"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-ALSystemUtilities" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreFoundation" -framework "CoreGraphics" -framework "CoreTelephony" -framework "ExternalAccessory" -framework "Foundation" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ALSystemUtilities" "${PODS_ROOT}/Headers/Public/FastttCamera" "${PODS_ROOT}/Headers/Public/GlitchKit" "${PODS_ROOT}/Headers/Public/TGCameraViewController"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ALSystemUtilities" -isystem "${PODS_ROOT}/Headers/Public/FastttCamera" -isystem "${PODS_ROOT}/Headers/Public/GlitchKit" -isystem "${PODS_ROOT}/Headers/Public/TGCameraViewController"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-ALSystemUtilities" -l"Pods-FastttCamera" -l"Pods-GlitchKit" -l"Pods-TGCameraViewController" -framework "AVFoundation" -framework "AssetsLibrary" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreFoundation" -framework "CoreGraphics" -framework "CoreImage" -framework "CoreMotion" -framework "CoreTelephony" -framework "ExternalAccessory" -framework "Foundation" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

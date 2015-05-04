@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FastttCamera.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GlitchKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TGCameraViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>324848881684AC2FBF949EDB</key>
+		<key>50ECE0432B2B4AB7659242C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>55A40EDC4EC98CABA33310C7</key>
+		<key>61725D705473B3AC9D939A30</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3CD749A06BCAD1D30E8885C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4B246B720E2AEFBB9FC96C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF6B581AC6F0B23C8830A2D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

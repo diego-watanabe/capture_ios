@@ -7,6 +7,7 @@
 //
 
 #import "PanicViewController.h"
+#import "GlitchKit.h"
 
 @interface PanicViewController ()
 
@@ -16,23 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-    UIView *topView = window.rootViewController.view;
-    topView.alpha = 0;
-    
-    
-    [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
-        topView.alpha = 1;
-    } completion:nil];
-    [self performSelector:@selector(showPermissionViewController) withObject:nil afterDelay:5.0];
+
+    [self performSelector:@selector(glitchKernelText) withObject:nil afterDelay:2.0];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)glitchKernelText{
+    [_kernelText glitch];
+    [self performSelector:@selector(showPermissionViewController) withObject:nil afterDelay:4.0];
 }
 - (void)showPermissionViewController{
     [self performSegueWithIdentifier:@"permission" sender:self];
