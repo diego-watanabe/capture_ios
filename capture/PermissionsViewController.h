@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface PermissionsViewController : UIViewController{
     NSString *emotionalState;
     NSString *brandPreferences;
-    NSUserDefaults *defaults;
+    User *user;
 }
 @property (weak, nonatomic) IBOutlet UITextField *emotionalStateString;
 @property (weak, nonatomic) IBOutlet UITextField *brandPreferencesString;

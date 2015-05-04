@@ -14,6 +14,7 @@
 		F106650C1ADCA77F00E0CF2E /* PermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F106650B1ADCA77F00E0CF2E /* PermissionViewController.m */; };
 		F178DB9F1AF5585000A636B8 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F178DB9E1AF5585000A636B8 /* ResultsViewController.m */; };
 		F178DBA21AF55FB600A636B8 /* PermissionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F178DBA11AF55FB600A636B8 /* PermissionsViewController.m */; };
+		F178DBA51AF80A7D00A636B8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F178DBA41AF80A7D00A636B8 /* User.m */; };
 		F1C5A3371ADB814B006E7825 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C5A3361ADB814B006E7825 /* main.m */; };
 		F1C5A33A1ADB814B006E7825 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C5A3391ADB814B006E7825 /* AppDelegate.m */; };
 		F1C5A33D1ADB814B006E7825 /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C5A33C1ADB814B006E7825 /* CaptureViewController.m */; };
@@ -49,6 +50,8 @@
 		F178DB9E1AF5585000A636B8 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		F178DBA01AF55FB600A636B8 /* PermissionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionsViewController.h; sourceTree = "<group>"; };
 		F178DBA11AF55FB600A636B8 /* PermissionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionsViewController.m; sourceTree = "<group>"; };
+		F178DBA31AF80A7D00A636B8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F178DBA41AF80A7D00A636B8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F1C5A3311ADB814B006E7825 /* capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C5A3351ADB814B006E7825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1C5A3361ADB814B006E7825 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				F178DB9E1AF5585000A636B8 /* ResultsViewController.m */,
 				F178DBA01AF55FB600A636B8 /* PermissionsViewController.h */,
 				F178DBA11AF55FB600A636B8 /* PermissionsViewController.m */,
+				F178DBA31AF80A7D00A636B8 /* User.h */,
+				F178DBA41AF80A7D00A636B8 /* User.m */,
 			);
 			path = capture;
 			sourceTree = "<group>";
@@ -224,7 +229,7 @@
 				TargetAttributes = {
 					F1C5A3301ADB814B006E7825 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = MH8Z8EB4UG;
+						DevelopmentTeam = 7SPMBGHRQ4;
 					};
 					F1C5A3491ADB814B006E7825 = {
 						CreatedOnToolsVersion = 6.2;
@@ -309,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F178DBA51AF80A7D00A636B8 /* User.m in Sources */,
 				F10665091ADCA6CA00E0CF2E /* PanicViewController.m in Sources */,
 				F1C5A33D1ADB814B006E7825 /* CaptureViewController.m in Sources */,
 				F1C5A33A1ADB814B006E7825 /* AppDelegate.m in Sources */,

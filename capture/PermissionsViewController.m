@@ -16,15 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    defaults = [NSUserDefaults standardUserDefaults];
     // Do any additional setup after loading the view.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    user = [User sharedUser];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)dismissKeyboard {
+    [self.view endEditing:YES];
+}
 /*
 #pragma mark - Navigation
 
@@ -38,7 +45,7 @@
 - (IBAction)captureTouchUpInside:(id)sender {
     emotionalState = _emotionalStateString.text;
     brandPreferences = _brandPreferencesString.text;
-    [defaults setObject:emotionalState forKey:@"emotion"];
-    [defaults setObject:brandPreferences forKey:@"brand"];
+    user.emotionString = emotionalState;
+    user.brandString = brandPreferences;
 }
 @end

@@ -16,13 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    defaults = [NSUserDefaults standardUserDefaults];
     // Do any additional setup after loading the view.
-    NSLog(@"%@", [defaults objectForKey:@"test"]);
     _displayDetails.hidden = YES;
     [self loadUserData];
-    [self loadImageData];
     [self loadNetworkData];
+    user = [User sharedUser];
+    [self loadImageData];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +31,7 @@
 }
 -(void)loadUserData {
     name = [ALHardware deviceName];
-    memory = [NSString stringWithFormat:@"%ld",[ALMemory totalMemory]];
+    memory = [NSString stringWithFormat:@"%ld",(long)[ALMemory totalMemory]];
     processor = [ALHardware cpu];
     capacity = [ALDisk totalDiskSpace];
     available = [ALDisk freeDiskSpace];
@@ -68,14 +68,14 @@
     }
 }
 -(void)loadImageData{
+    _imageView.image = user.userImage;
     fileType = @"JPG";
     fileSize = @"1.23MB";
-    dimensions = @"300x200px";
-    colorSpace = @"RGB";
-    colorProfile = @"idk";
-    emotionalState = [defaults objectForKey:@"emotion"];
-    brands = [defaults objectForKey:@"brand"];
-    
+    dimensions = [NSString stringWithFormat:@"%iX%i", (int)user.userImage.size.width, (int)user.userImage.size.height];
+    colorSpace = [NSString stringWithFormat:@"%li", (long)user.userImage.renderingMode];
+    colorProfile = [NSString stringWithFormat:@"%@", user.indexPropertyName];
+    emotionalState = user.emotionString;
+    brands = user.brandString;
 }
 /*
 #pragma mark - Navigation
@@ -213,7 +213,7 @@
     _label1.text = @"Kind";
     _label2.text = @"Image Size";
     _label3.text = @"Image Dimensions";
-    _label4.text = @"Color Space";
+    _label4.text = @"Rendering Mode";
     _label5.text = @"Color Profile";
     _label6.text = @"Emotional State";
     _label7.text = @"Brand(s)";
@@ -238,6 +238,7 @@
 - (IBAction)exitDetailsTouchUpInside:(id)sender {
     _displayDetails.hidden = YES;
     _longtext.hidden = YES;
+    _imageView.hidden = YES;
     _label1.text = @"";
     _label2.text = @"";
     _label3.text = @"";
@@ -300,4 +301,16 @@
 }
 
 
+- (IBAction)recoverImage:(id)sender {
+    if(displaying){
+        displaying = NO;
+        _imageView.hidden = YES;
+    }
+    else {
+        displaying = YES;
+        _imageView.hidden = NO;
+    }
+    
+    
+}
 @end

@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
-@interface CaptureViewController : UIViewController
+@interface CaptureViewController : UIViewController {
+    User *user;
+}
 
 - (IBAction)cameraButtonTouch:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *pictureView;

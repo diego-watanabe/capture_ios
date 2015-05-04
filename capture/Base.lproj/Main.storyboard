@@ -284,15 +284,15 @@
                         <viewControllerLayoutGuide type="top" id="WXO-rw-2E1"/>
                         <viewControllerLayoutGuide type="bottom" id="cZc-cD-y0W"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5V6-aK-Aab">
+                    <view key="view" alpha="0.34999999999999964" contentMode="scaleToFill" id="5V6-aK-Aab">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="kernel_text" translatesAutoresizingMaskIntoConstraints="NO" id="VwH-iJ-Cf4">
-                                <rect key="frame" x="132" y="23" width="336" height="635"/>
+                                <rect key="frame" x="113" y="7" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.792156862745098" green="0.78431372549019607" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="VwH-iJ-Cf4" secondAttribute="centerY" constant="-40" id="DQW-E5-Vgb"/>
                             <constraint firstAttribute="centerX" secondItem="VwH-iJ-Cf4" secondAttribute="centerX" id="XEn-Ap-fpi"/>
@@ -471,7 +471,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="285" id="c6H-j2-XZc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="click_logo" translatesAutoresizingMaskIntoConstraints="NO" id="14Q-BQ-eNq">
@@ -840,22 +840,44 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71i-FS-C4e">
+                                <rect key="frame" x="135" y="190" width="330" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="F1b-qH-Whu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-0P-eg5">
+                                <rect key="frame" x="16" y="28" width="199" height="30"/>
+                                <state key="normal" title="R E C O V E R: USER.IMAGE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recoverImage:" destination="Hkh-so-E3q" eventType="touchUpInside" id="IFQ-qy-qOY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WDk-bU-2CR" firstAttribute="leading" secondItem="iaw-mq-tnX" secondAttribute="leading" id="00V-1J-JjV"/>
+                            <constraint firstAttribute="centerX" secondItem="71i-FS-C4e" secondAttribute="centerX" id="76u-kV-1zC"/>
                             <constraint firstItem="mfC-fk-UX8" firstAttribute="top" secondItem="Smq-8B-XVl" secondAttribute="bottom" constant="20" id="8i5-Tg-cB9"/>
+                            <constraint firstItem="LVC-0P-eg5" firstAttribute="leading" secondItem="Pk9-u7-Ekq" secondAttribute="leadingMargin" id="8kV-xr-EZt"/>
                             <constraint firstAttribute="centerX" secondItem="iaw-mq-tnX" secondAttribute="centerX" constant="-1" id="ASE-VR-zoy"/>
                             <constraint firstAttribute="centerX" secondItem="Smq-8B-XVl" secondAttribute="centerX" id="BPc-3c-y1W"/>
                             <constraint firstAttribute="centerY" secondItem="gL9-9u-xHf" secondAttribute="centerY" constant="31" id="Eoh-cC-sdD"/>
                             <constraint firstItem="iaw-mq-tnX" firstAttribute="top" secondItem="cOj-Mk-Rhc" secondAttribute="top" constant="-100" id="IER-cU-cBD"/>
+                            <constraint firstItem="71i-FS-C4e" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="170" id="My1-uf-fbG"/>
                             <constraint firstAttribute="centerX" secondItem="F2J-bV-Zgy" secondAttribute="centerX" constant="-1" id="Pm8-eJ-Qjf"/>
                             <constraint firstItem="cOj-Mk-Rhc" firstAttribute="leading" secondItem="gL9-9u-xHf" secondAttribute="leading" constant="101" id="S0i-NC-oTy"/>
                             <constraint firstItem="iaw-mq-tnX" firstAttribute="top" secondItem="WkQ-Hl-tdx" secondAttribute="top" constant="99" id="SKG-0t-Kbf"/>
                             <constraint firstItem="WDk-bU-2CR" firstAttribute="leading" secondItem="cOj-Mk-Rhc" secondAttribute="leading" id="UGK-Y1-A5C"/>
                             <constraint firstItem="iaw-mq-tnX" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="210" id="WOt-JN-EkU"/>
+                            <constraint firstAttribute="centerY" secondItem="71i-FS-C4e" secondAttribute="centerY" id="YOX-GM-dej"/>
+                            <constraint firstItem="LVC-0P-eg5" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="8" id="d0x-Lg-XNl"/>
+                            <constraint firstItem="LVC-0P-eg5" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="8" id="fZD-76-r0Q"/>
                             <constraint firstItem="Smq-8B-XVl" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="bottom" constant="71" id="jY8-1S-Aw0"/>
                             <constraint firstItem="cOj-Mk-Rhc" firstAttribute="centerY" secondItem="gL9-9u-xHf" secondAttribute="centerY" constant="51.5" id="kI5-JY-9Wp"/>
+                            <constraint firstItem="LVC-0P-eg5" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="8" id="o2A-Qu-E0l"/>
                             <constraint firstItem="WDk-bU-2CR" firstAttribute="trailing" secondItem="cOj-Mk-Rhc" secondAttribute="trailing" id="o7y-hD-dad"/>
                             <constraint firstAttribute="centerX" secondItem="WkQ-Hl-tdx" secondAttribute="centerX" constant="-1" id="rMP-TY-7aP"/>
                             <constraint firstItem="WDk-bU-2CR" firstAttribute="top" secondItem="cOj-Mk-Rhc" secondAttribute="top" constant="97" id="slj-hO-vxg"/>
@@ -873,6 +895,7 @@
                         <outlet property="detailsTitleLabel" destination="nP4-iu-jkO" id="oYi-5O-BuV"/>
                         <outlet property="displayDetails" destination="F2J-bV-Zgy" id="a9b-c4-tII"/>
                         <outlet property="imageButton" destination="F2J-bV-Zgy" id="G30-KN-us3"/>
+                        <outlet property="imageView" destination="71i-FS-C4e" id="ljL-fV-Dpv"/>
                         <outlet property="label1" destination="i9d-Lv-ON0" id="T09-Q6-ZUG"/>
                         <outlet property="label10" destination="hz5-V8-6n0" id="oQT-iG-eKw"/>
                         <outlet property="label11" destination="0gT-bd-AAH" id="GjP-Oa-SK8"/>
@@ -915,7 +938,7 @@
         <image name="flash_icon" width="13" height="20"/>
         <image name="homecapture" width="182" height="179"/>
         <image name="image" width="47" height="41"/>
-        <image name="kernel_text" width="336" height="635"/>
+        <image name="kernel_text" width="375" height="667"/>
         <image name="network" width="47" height="42"/>
         <image name="off_button" width="20" height="9"/>
         <image name="question1" width="258" height="26"/>

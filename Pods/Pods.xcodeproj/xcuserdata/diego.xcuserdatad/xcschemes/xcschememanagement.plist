@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-JSONModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TGCameraViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>50ECE0432B2B4AB7659242C2</key>
+		<key>257CF6A095A5F3381F8E9B75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61725D705473B3AC9D939A30</key>
+		<key>33D10651956769FA7262D488</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3CD749A06BCAD1D30E8885C</key>
+		<key>3847354B2E2E4C6734BBE4BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D4B246B720E2AEFBB9FC96C3</key>
+		<key>5ABFCFE3E684CFF33F43B0BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF6B581AC6F0B23C8830A2D9</key>
+		<key>7347F436089EE2CC7C9086FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F27EC71C1CB5D25A979D5C98</key>
 		<dict>
 			<key>primary</key>
 			<true/>

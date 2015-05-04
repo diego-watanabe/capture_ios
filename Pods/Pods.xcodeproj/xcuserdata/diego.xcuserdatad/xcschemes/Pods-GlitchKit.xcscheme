@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF6B581AC6F0B23C8830A2D9"
+               BlueprintIdentifier = "257CF6A095A5F3381F8E9B75"
                BuildableName = "libPods-GlitchKit.a"
                BlueprintName = "Pods-GlitchKit"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import<malloc/malloc.h>
 #import "ALSystem.h"
+#import "User.h"
 
 @interface ResultsViewController : UIViewController{
-    NSMutableDictionary *quotes;
-    NSUserDefaults *defaults;
+    //NSMutableDictionary *quotes;
     NSString *detailsTitle;
     NSString *detailsBody;
     NSString *networkStatus;
@@ -39,7 +40,10 @@
     NSString *externalIP;
     NSString *internalIP;
     NSString *carrierName;
+    User *user;
+    BOOL displaying;
 }
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *longtext;
 @property (weak, nonatomic) IBOutlet UILabel *label11;
 
@@ -66,6 +70,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *result9;
 @property (weak, nonatomic) IBOutlet UILabel *result10;
 
+- (IBAction)recoverImage:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *detailsTitleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *userButton;
 - (IBAction)userButtonTouchUpInside:(id)sender;

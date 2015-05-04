@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self performSelector:@selector(glitchKernelText) withObject:nil afterDelay:2.0];
+    [self performSelector:@selector(glitchKernelText) withObject:nil afterDelay:1.0];
     // Do any additional setup after loading the view.
 }
 
@@ -27,10 +27,11 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)glitchKernelText{
-    [_kernelText glitch];
-    [self performSelector:@selector(showPermissionViewController) withObject:nil afterDelay:4.0];
+    _kernelText.hidden=YES;
+    [self performSelector:@selector(showPermissionViewController) withObject:nil afterDelay:.1];
 }
 - (void)showPermissionViewController{
+    _kernelText.hidden = NO;
     [self performSegueWithIdentifier:@"permission" sender:self];
 }
 /*

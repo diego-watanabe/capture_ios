@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    user = [User sharedUser];
     // Do any additional setup after loading the view, typically from a nib.
     _fastCamera = [FastttCamera new];
     self.fastCamera.delegate = self;
@@ -44,17 +45,18 @@
 - (void)cameraController:(FastttCamera *)cameraController
 didFinishScalingCapturedImage:(FastttCapturedImage *)capturedImage
 {
+    user.userImage = capturedImage.scaledImage;
     /**
      *  Here, capturedImage.scaledImage contains the scaled-down version
      *  of the image.
      */
-    NSData *imgData = UIImageJPEGRepresentation(capturedImage.scaledImage, 1); // 1 is compression quality
-    
-    // Identify the home directory and file name
-    NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Test.jpg"];
-    
-    // Write the file.  Choose YES atomically to enforce an all or none write. Use the NO flag if partially written files are okay which can occur in cases of corruption
-    [imgData writeToFile:jpgPath atomically:YES];
+//    NSData *imgData = UIImageJPEGRepresentation(capturedImage.scaledImage, 1); // 1 is compression quality
+//    
+//    // Identify the home directory and file name
+//    NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Test.jpg"];
+//    
+//    // Write the file.  Choose YES atomically to enforce an all or none write. Use the NO flag if partially written files are okay which can occur in cases of corruption
+//    [imgData writeToFile:jpgPath atomically:YES];
     [self performSegueWithIdentifier:@"toWarning" sender:self];
 }
 
