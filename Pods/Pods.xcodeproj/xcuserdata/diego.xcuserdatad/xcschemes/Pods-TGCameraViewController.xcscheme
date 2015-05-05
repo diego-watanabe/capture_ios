@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7347F436089EE2CC7C9086FA"
+               BlueprintIdentifier = "B32EA4899206E7552BA4A5B3"
                BuildableName = "libPods-TGCameraViewController.a"
                BlueprintName = "Pods-TGCameraViewController"
                ReferencedContainer = "container:Pods.xcodeproj">

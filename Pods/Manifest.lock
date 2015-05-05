@@ -6,6 +6,8 @@ PODS:
     - FastttCamera/Default (= 0.2.9)
   - FastttCamera/Default (0.2.9)
   - GlitchKit (0.0.3)
+  - HockeySDK (3.6.4)
+  - iHasApp (2.2.0)
   - JSONModel (1.0.2)
   - TGCameraViewController (2.0.1)
 
@@ -13,6 +15,8 @@ DEPENDENCIES:
   - ALSystemUtilities
   - FastttCamera
   - GlitchKit
+  - HockeySDK
+  - iHasApp
   - JSONModel
   - TGCameraViewController
 
@@ -20,6 +24,8 @@ SPEC CHECKSUMS:
   ALSystemUtilities: bc0e5459d80dee83eea615a88267f385d6f1aa2d
   FastttCamera: bd173337377bcf4f1fb698bab3362fcf2914039c
   GlitchKit: 2b94c80b75a3b6cffa2502fa04d928b749b72a4a
+  HockeySDK: c07cdd580296737edcd0963e292c19885a53f563
+  iHasApp: 077ecc78432bd9130385d079ddd9601759d17b52
   JSONModel: 6ffcb4ffa3659c9e9a2e5d45d6c7705bab187c03
   TGCameraViewController: 319a4809cd244186eb709d3319c832f29ed76591
 

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "User.h"
+#import "HockeySDK.h"
 
 @interface AppDelegate ()
 

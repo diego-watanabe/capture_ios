@@ -64,6 +64,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "TGCameraViewController/TGCameraViewController/View/de.lproj/TGCameraAuthorizationViewController.strings"
   install_resource "TGCameraViewController/TGCameraViewController/View/pt-BR.lproj/TGCameraAuthorizationViewController.strings"
   install_resource "TGCameraViewController/TGCameraViewController/TGCameraViewController.xcassets"
+  install_resource "iHasApp/iHasApp/schemeApps.json"
+  install_resource "${BUILT_PRODUCTS_DIR}/HockeySDKResources.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "TGCameraViewController/TGCameraViewController/View/Base.lproj/TGCameraAuthorizationViewController.xib"
@@ -72,6 +74,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "TGCameraViewController/TGCameraViewController/View/de.lproj/TGCameraAuthorizationViewController.strings"
   install_resource "TGCameraViewController/TGCameraViewController/View/pt-BR.lproj/TGCameraAuthorizationViewController.strings"
   install_resource "TGCameraViewController/TGCameraViewController/TGCameraViewController.xcassets"
+  install_resource "iHasApp/iHasApp/schemeApps.json"
+  install_resource "${BUILT_PRODUCTS_DIR}/HockeySDKResources.bundle"
 fi
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

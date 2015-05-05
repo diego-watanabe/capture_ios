@@ -19,12 +19,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-HockeySDK-HockeySDKResources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HockeySDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-TGCameraViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-iHasApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>257CF6A095A5F3381F8E9B75</key>
+		<key>28A63A6423EB049367D74EEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33D10651956769FA7262D488</key>
+		<key>3174759E466F0FAA059913BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3847354B2E2E4C6734BBE4BC</key>
+		<key>54E88544AD2DD413477E4F62</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5ABFCFE3E684CFF33F43B0BA</key>
+		<key>5EF2A9FBFE133F81780B9BB0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7347F436089EE2CC7C9086FA</key>
+		<key>7E960C5D4FC586006F7D995C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F27EC71C1CB5D25A979D5C98</key>
+		<key>B32EA4899206E7552BA4A5B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF48B92AFCEDB35A9ED6722F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF6E926C5380FFFCF055E5CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD7E2D23FC29F3B6DE17654B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

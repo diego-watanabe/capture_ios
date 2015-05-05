@@ -18,11 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _displayDetails.hidden = YES;
-    [self loadUserData];
-    [self loadNetworkData];
     user = [User sharedUser];
-    [self loadImageData];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,7 +64,7 @@
     }
 }
 -(void)loadImageData{
-    _imageView.image = user.userImage;
+    _imageView.image = [UIImage imageNamed:@"alfredo"];
     fileType = @"JPG";
     fileSize = @"1.23MB";
     dimensions = [NSString stringWithFormat:@"%iX%i", (int)user.userImage.size.width, (int)user.userImage.size.height];
@@ -88,6 +84,7 @@
 */
 
 - (IBAction)userButtonTouchUpInside:(id)sender {
+    [self loadUserData];
     _displayDetails.hidden = NO;
     _displayDetails.backgroundColor = [self colorWithHexString:@"2fa21d"];
     _detailsTitleLabel.text = @"USER INFORMATION";
@@ -116,6 +113,7 @@
     _result10.text = @"";
 }
 - (IBAction)networkButtonTouchUpInside:(id)sender {
+    [self loadNetworkData];
     _displayDetails.hidden = NO;
     _displayDetails.backgroundColor = [UIColor darkGrayColor];//[self colorWithHexString:@"e6e6e6"];
     _detailsTitleLabel.text = @"NETWORK";
@@ -206,6 +204,7 @@
     
 }
 - (IBAction)imageButtonTouchUpInside:(id)sender {
+    [self loadImageData];
     _displayDetails.hidden = NO;
     _displayDetails.backgroundColor = [self colorWithHexString:@"ff0000"];
     _detailsTitleLabel.text = @"IMAGE INFORMATION";
