@@ -69,6 +69,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *result8;
 @property (weak, nonatomic) IBOutlet UILabel *result9;
 @property (weak, nonatomic) IBOutlet UILabel *result10;
+@property (weak, nonatomic) IBOutlet UIButton *recoveryButton;
 
 - (IBAction)recoverImage:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *detailsTitleLabel;

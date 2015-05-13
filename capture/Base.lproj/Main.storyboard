@@ -284,7 +284,7 @@
                         <viewControllerLayoutGuide type="top" id="WXO-rw-2E1"/>
                         <viewControllerLayoutGuide type="bottom" id="cZc-cD-y0W"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.34999999999999964" contentMode="scaleToFill" id="5V6-aK-Aab">
+                    <view key="view" contentMode="scaleToFill" id="5V6-aK-Aab">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -292,7 +292,7 @@
                                 <rect key="frame" x="113" y="7" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.35933554292929293" green="0.35440178372295017" blue="0.35810210312770724" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.88038589015151514" green="0.86829799048186296" blue="0.87736391523410207" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="VwH-iJ-Cf4" secondAttribute="centerY" constant="-40" id="DQW-E5-Vgb"/>
                             <constraint firstAttribute="centerX" secondItem="VwH-iJ-Cf4" secondAttribute="centerX" id="XEn-Ap-fpi"/>
@@ -846,9 +846,9 @@
                                     <constraint firstAttribute="width" constant="330" id="F1b-qH-Whu"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-0P-eg5">
-                                <rect key="frame" x="16" y="28" width="199" height="30"/>
-                                <state key="normal" title="R E C O V E R: USER.IMAGE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-0P-eg5">
+                                <rect key="frame" x="16" y="28" width="51" height="70"/>
+                                <state key="normal" image="photo-image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -909,6 +909,7 @@
                         <outlet property="label9" destination="pAq-Fk-6Oz" id="a9p-ax-f7g"/>
                         <outlet property="longtext" destination="Vnh-MQ-Tt6" id="qjr-h7-FRh"/>
                         <outlet property="networkButton" destination="gL9-9u-xHf" id="JnX-uZ-oFW"/>
+                        <outlet property="recoveryButton" destination="LVC-0P-eg5" id="ddn-7T-PMj"/>
                         <outlet property="result1" destination="768-91-WwE" id="4mU-tJ-FI4"/>
                         <outlet property="result10" destination="k9g-P1-s59" id="9k6-g3-eaU"/>
                         <outlet property="result2" destination="J0X-0a-zSY" id="74Y-r7-1nO"/>
@@ -941,6 +942,7 @@
         <image name="kernel_text" width="375" height="667"/>
         <image name="network" width="47" height="42"/>
         <image name="off_button" width="20" height="9"/>
+        <image name="photo-image" width="51" height="70"/>
         <image name="question1" width="258" height="26"/>
         <image name="question2" width="186" height="26"/>
         <image name="recover_button" width="187" height="43"/>
