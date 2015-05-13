@@ -21,6 +21,7 @@
     _displayDetails.hidden = YES;
     _recoveryButton.hidden = YES;
     user = [User sharedUser];
+    _imageView.image = user.userImage;
     timer = [NSTimer scheduledTimerWithTimeInterval:5.0
                                              target:self
                                            selector:@selector(timeFired)
@@ -90,7 +91,7 @@
     }
 }
 -(void)loadImageData{
-    _imageView.image = [UIImage imageNamed:@"alfredo"];
+   // _imageView.image = [UIImage imageNamed:@"alfredo"];
     fileType = @"JPG";
     fileSize = @"1.23MB";
     dimensions = [NSString stringWithFormat:@"%iX%i", (int)user.userImage.size.width, (int)user.userImage.size.height];
