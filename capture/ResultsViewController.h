@@ -42,6 +42,7 @@
     NSString *carrierName;
     User *user;
     BOOL displaying;
+    NSTimer *timer;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *longtext;
