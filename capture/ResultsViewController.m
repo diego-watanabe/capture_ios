@@ -333,6 +333,8 @@
 
 
 - (IBAction)recoverImage:(id)sender {
+    _detailsTitleLabel.text = @"RECOVERY";
+
     displaying = YES;
     _recoveryButton.hidden = YES;
     NSInteger randomNumber = arc4random() % 3;

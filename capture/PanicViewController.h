@@ -10,5 +10,6 @@
 
 @interface PanicViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *kernelText;
+@property (weak, nonatomic) IBOutlet UITextView *kernel;
 
 @end
