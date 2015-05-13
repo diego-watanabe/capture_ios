@@ -39,10 +39,11 @@
 {
         if (alertView.tag == 0)//location
         {
-            NSLog(@"Button Index =%ld",buttonIndex);
             if (buttonIndex == 0)
             {
                 NSLog(@"You have clicked Cancel");
+                [self performSegueWithIdentifier:@"home" sender:self];
+            
             }
             else if(buttonIndex == 1)
             {
@@ -55,10 +56,11 @@
         }
         else if(alertView.tag == 1)
         {
-            NSLog(@"Button Index =%ld",buttonIndex);
             if (buttonIndex == 0)
             {
                 NSLog(@"You have clicked Cancel");
+                [self performSegueWithIdentifier:@"home" sender:self];
+
             }
             else if(buttonIndex == 1)
             {
@@ -70,10 +72,11 @@
         }
         else if(alertView.tag == 2)
         {
-            NSLog(@"Button Index =%ld",buttonIndex);
             if (buttonIndex == 0)
             {
                 NSLog(@"You have clicked Cancel");
+                [self performSegueWithIdentifier:@"home" sender:self];
+
             }
             else if(buttonIndex == 1)
             {
@@ -91,10 +94,11 @@
         }
         else if(alertView.tag == 3)
         {
-            NSLog(@"Button Index =%ld",buttonIndex);
             if (buttonIndex == 0)
             {
                 NSLog(@"You have clicked Cancel");
+                [self performSegueWithIdentifier:@"home" sender:self];
+
             }
             else if(buttonIndex == 1)
             {

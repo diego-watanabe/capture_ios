@@ -127,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2183" y="1140"/>
+            <point key="canvasLocation" x="2613" y="896"/>
         </scene>
         <!--warningScreen-->
         <scene sceneID="KNR-nI-OxF">
@@ -425,11 +425,12 @@
                         <outlet property="sudoString" destination="4td-mw-fGT" id="wPv-9e-Kl8"/>
                         <outlet property="thirdPanic" destination="BsB-SM-utB" id="UWg-jS-dGL"/>
                         <segue destination="bkC-1S-wcH" kind="presentation" identifier="result" modalTransitionStyle="crossDissolve" id="h7b-qi-iLp"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="home" modalTransitionStyle="crossDissolve" id="1nz-ze-dC4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJZ-Wg-cyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3194" y="250"/>
+            <point key="canvasLocation" x="3227" y="393"/>
         </scene>
         <!--questionare-->
         <scene sceneID="qdA-je-q6b">
@@ -952,5 +953,8 @@
         <image name="turn_camera_icon" width="28" height="21"/>
         <image name="user" width="46" height="41"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1nz-ze-dC4"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.98431372549019602" green="0.0" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
 </document>
