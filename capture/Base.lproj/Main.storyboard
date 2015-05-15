@@ -852,12 +852,39 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-0P-eg5">
-                                <rect key="frame" x="16" y="28" width="51" height="70"/>
+                                <rect key="frame" x="16" y="28" width="50" height="100"/>
                                 <state key="normal" image="photo-image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="recoverImage:" destination="Hkh-so-E3q" eventType="touchUpInside" id="IFQ-qy-qOY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPZ-xK-8Q0">
+                                <rect key="frame" x="26" y="480" width="50" height="100"/>
+                                <state key="normal" image="photo-image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recoverImage:" destination="Hkh-so-E3q" eventType="touchUpInside" id="Q02-td-UbU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-vq-Ncy">
+                                <rect key="frame" x="534" y="28" width="50" height="100"/>
+                                <state key="normal" image="photo-image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recoverImage:" destination="Hkh-so-E3q" eventType="touchUpInside" id="1w3-Zo-nEH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-Ar-CGS">
+                                <rect key="frame" x="534" y="480" width="50" height="100"/>
+                                <state key="normal" image="photo-image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recoverImage:" destination="Hkh-so-E3q" eventType="touchUpInside" id="ZZ9-NK-v0S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -870,6 +897,7 @@
                             <constraint firstAttribute="centerX" secondItem="iaw-mq-tnX" secondAttribute="centerX" constant="-1" id="ASE-VR-zoy"/>
                             <constraint firstAttribute="centerX" secondItem="Smq-8B-XVl" secondAttribute="centerX" id="BPc-3c-y1W"/>
                             <constraint firstAttribute="centerY" secondItem="gL9-9u-xHf" secondAttribute="centerY" constant="31" id="Eoh-cC-sdD"/>
+                            <constraint firstItem="mfC-fk-UX8" firstAttribute="top" secondItem="cPZ-xK-8Q0" secondAttribute="bottom" constant="20" id="H1C-aM-p9L"/>
                             <constraint firstItem="iaw-mq-tnX" firstAttribute="top" secondItem="cOj-Mk-Rhc" secondAttribute="top" constant="-100" id="IER-cU-cBD"/>
                             <constraint firstItem="71i-FS-C4e" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="170" id="My1-uf-fbG"/>
                             <constraint firstAttribute="centerX" secondItem="F2J-bV-Zgy" secondAttribute="centerX" constant="-1" id="Pm8-eJ-Qjf"/>
@@ -880,12 +908,15 @@
                             <constraint firstAttribute="centerY" secondItem="71i-FS-C4e" secondAttribute="centerY" id="YOX-GM-dej"/>
                             <constraint firstItem="LVC-0P-eg5" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="8" id="d0x-Lg-XNl"/>
                             <constraint firstItem="LVC-0P-eg5" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="8" id="fZD-76-r0Q"/>
+                            <constraint firstItem="GSV-Ar-CGS" firstAttribute="trailing" secondItem="Pk9-u7-Ekq" secondAttribute="trailingMargin" id="h1b-2e-Dj0"/>
                             <constraint firstItem="Smq-8B-XVl" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="bottom" constant="71" id="jY8-1S-Aw0"/>
                             <constraint firstItem="cOj-Mk-Rhc" firstAttribute="centerY" secondItem="gL9-9u-xHf" secondAttribute="centerY" constant="51.5" id="kI5-JY-9Wp"/>
                             <constraint firstItem="LVC-0P-eg5" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="8" id="o2A-Qu-E0l"/>
                             <constraint firstItem="WDk-bU-2CR" firstAttribute="trailing" secondItem="cOj-Mk-Rhc" secondAttribute="trailing" id="o7y-hD-dad"/>
                             <constraint firstAttribute="centerX" secondItem="WkQ-Hl-tdx" secondAttribute="centerX" constant="-1" id="rMP-TY-7aP"/>
                             <constraint firstItem="WDk-bU-2CR" firstAttribute="top" secondItem="cOj-Mk-Rhc" secondAttribute="top" constant="97" id="slj-hO-vxg"/>
+                            <constraint firstItem="mfC-fk-UX8" firstAttribute="top" secondItem="GSV-Ar-CGS" secondAttribute="bottom" constant="20" id="vvB-Hs-ceA"/>
+                            <constraint firstItem="cPZ-xK-8Q0" firstAttribute="leading" secondItem="Pk9-u7-Ekq" secondAttribute="leadingMargin" constant="10" id="wLl-iG-Tzq"/>
                             <constraint firstAttribute="centerY" secondItem="F2J-bV-Zgy" secondAttribute="centerY" constant="-9" id="wdQ-Zb-Eni"/>
                             <constraint firstItem="WDk-bU-2CR" firstAttribute="trailing" secondItem="iaw-mq-tnX" secondAttribute="trailing" id="yN8-jV-QkC"/>
                         </constraints>
@@ -946,7 +977,7 @@
         <image name="image" width="47" height="41"/>
         <image name="network" width="47" height="42"/>
         <image name="off_button" width="20" height="9"/>
-        <image name="photo-image" width="51" height="70"/>
+        <image name="photo-image" width="50" height="100"/>
         <image name="question1" width="258" height="26"/>
         <image name="question2" width="186" height="26"/>
         <image name="recover_button" width="187" height="43"/>
@@ -957,7 +988,7 @@
         <image name="user" width="46" height="41"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1nz-ze-dC4"/>
+        <segue reference="svH-ab-jEn"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.98431372549019602" green="0.0" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
 </document>
