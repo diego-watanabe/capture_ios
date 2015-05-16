@@ -16,6 +16,8 @@
 - (IBAction)cameraButtonTouch:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *pictureView;
 
+- (IBAction)turnCamera:(id)sender;
+- (IBAction)turnOffFlash:(id)sender;
 
 
 @end

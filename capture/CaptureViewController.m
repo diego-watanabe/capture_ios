@@ -61,5 +61,16 @@ didFinishScalingCapturedImage:(FastttCapturedImage *)capturedImage
 }
 
 
+- (IBAction)turnCamera:(id)sender {
+    if ([FastttCamera isFlashAvailableForCameraDevice:_fastCamera.cameraDevice]) {
+        [_fastCamera setCameraDevice:_fastCamera.cameraDevice];
+    }
+}
+
+- (IBAction)turnOffFlash:(id)sender {
+    if ([FastttCamera isTorchAvailableForCameraDevice:self.fastCamera.cameraDevice]) {
+        [_fastCamera setCameraFlashMode:YES];
+    }
+}
 @end
 

@@ -53,14 +53,8 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="capture_text_background" translatesAutoresizingMaskIntoConstraints="NO" id="d32-KH-eXA">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="turn_camera_icon" translatesAutoresizingMaskIntoConstraints="NO" id="L1h-nE-RBp">
-                                        <rect key="frame" x="502" y="44" width="28" height="21"/>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="flash_icon" translatesAutoresizingMaskIntoConstraints="NO" id="SRP-ov-sos">
                                         <rect key="frame" x="60" y="45" width="13" height="20"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="off_button" translatesAutoresizingMaskIntoConstraints="NO" id="L1e-XJ-Cpb">
-                                        <rect key="frame" x="78" y="50" width="20" height="9"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAZ-eA-0G4">
                                         <rect key="frame" x="267" y="22" width="66" height="66"/>
@@ -71,23 +65,50 @@
                                             <action selector="cameraButtonTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yW8-nZ-e79"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9v-WW-wTT">
+                                        <rect key="frame" x="73" y="40" width="30" height="30"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                        <state key="normal" title="off">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="turnOffFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Vq-G8-Jzc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjT-vd-o4S">
+                                        <rect key="frame" x="512" y="44" width="28" height="22"/>
+                                        <state key="normal" image="turn_camera_icon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="turnCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqJ-BG-zMd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="SRP-ov-sos" secondAttribute="centerY" constant="5" id="49l-Gz-jsm"/>
-                                    <constraint firstItem="SRP-ov-sos" firstAttribute="leading" secondItem="L1e-XJ-Cpb" secondAttribute="leading" constant="-18" id="BAm-Mo-9jy"/>
-                                    <constraint firstItem="L1h-nE-RBp" firstAttribute="centerY" secondItem="SRP-ov-sos" secondAttribute="centerY" id="IcB-xi-vao"/>
+                                    <constraint firstAttribute="centerY" secondItem="tjT-vd-o4S" secondAttribute="centerY" constant="5" id="4EY-9k-1wJ"/>
+                                    <constraint firstAttribute="centerY" secondItem="h9v-WW-wTT" secondAttribute="centerY" constant="5" id="Rwp-b9-W9Q"/>
                                     <constraint firstAttribute="centerX" secondItem="d32-KH-eXA" secondAttribute="centerX" id="Tvz-om-IIX"/>
                                     <constraint firstAttribute="centerX" secondItem="uAZ-eA-0G4" secondAttribute="centerX" id="UGI-t6-4AR"/>
                                     <constraint firstAttribute="centerY" secondItem="uAZ-eA-0G4" secondAttribute="centerY" constant="5" id="Wft-9B-Ntv"/>
-                                    <constraint firstItem="SRP-ov-sos" firstAttribute="centerY" secondItem="L1e-XJ-Cpb" secondAttribute="centerY" id="asX-Un-ved"/>
                                     <constraint firstAttribute="centerY" secondItem="d32-KH-eXA" secondAttribute="centerY" id="bsp-cN-yjW"/>
                                     <constraint firstAttribute="height" secondItem="d32-KH-eXA" secondAttribute="height" id="dQq-dT-SAP"/>
                                     <constraint firstAttribute="width" secondItem="d32-KH-eXA" secondAttribute="width" id="ejm-8r-bCu"/>
+                                    <constraint firstAttribute="trailing" secondItem="tjT-vd-o4S" secondAttribute="trailing" constant="60" id="fLK-l3-C8m"/>
+                                    <constraint firstItem="h9v-WW-wTT" firstAttribute="leading" secondItem="DFc-va-gUP" secondAttribute="leading" constant="73" id="gM7-pZ-04C"/>
                                     <constraint firstItem="SRP-ov-sos" firstAttribute="leading" secondItem="DFc-va-gUP" secondAttribute="leading" constant="60" id="lgT-Zz-DNV"/>
-                                    <constraint firstAttribute="centerY" secondItem="L1h-nE-RBp" secondAttribute="centerY" constant="5" id="pw7-UX-LVC"/>
-                                    <constraint firstAttribute="trailing" secondItem="L1h-nE-RBp" secondAttribute="trailing" constant="70" id="wLG-V4-Z2v"/>
+                                    <constraint firstAttribute="centerX" secondItem="h9v-WW-wTT" secondAttribute="centerX" constant="204" id="osD-bE-5kR"/>
+                                    <constraint firstItem="SRP-ov-sos" firstAttribute="leading" secondItem="h9v-WW-wTT" secondAttribute="leading" constant="-13" id="rQG-dI-Go6"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="osD-bE-5kR"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4R-Gf-L9A">
                                 <rect key="frame" x="0.0" y="82" width="600" height="375"/>
@@ -866,16 +887,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="recoverImage:" destination="Hkh-so-E3q" eventType="touchUpInside" id="Q02-td-UbU"/>
+                                    <action selector="bottomLeftTouchUpInside:" destination="Hkh-so-E3q" eventType="touchUpInside" id="0WN-MA-9cf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-vq-Ncy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-vq-Ncy">
                                 <rect key="frame" x="534" y="28" width="50" height="100"/>
                                 <state key="normal" image="photo-image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="recoverImage:" destination="Hkh-so-E3q" eventType="touchUpInside" id="1w3-Zo-nEH"/>
+                                    <action selector="topRightTouchUpInside:" destination="Hkh-so-E3q" eventType="touchUpInside" id="Yh4-HL-JoD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-Ar-CGS">
@@ -884,7 +905,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="recoverImage:" destination="Hkh-so-E3q" eventType="touchUpInside" id="ZZ9-NK-v0S"/>
+                                    <action selector="bottomRightTouchUpInside:" destination="Hkh-so-E3q" eventType="touchUpInside" id="QyT-GK-S7Z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -911,8 +932,10 @@
                             <constraint firstItem="GSV-Ar-CGS" firstAttribute="trailing" secondItem="Pk9-u7-Ekq" secondAttribute="trailingMargin" id="h1b-2e-Dj0"/>
                             <constraint firstItem="Smq-8B-XVl" firstAttribute="top" secondItem="F2J-bV-Zgy" secondAttribute="bottom" constant="71" id="jY8-1S-Aw0"/>
                             <constraint firstItem="cOj-Mk-Rhc" firstAttribute="centerY" secondItem="gL9-9u-xHf" secondAttribute="centerY" constant="51.5" id="kI5-JY-9Wp"/>
+                            <constraint firstItem="kd2-vq-Ncy" firstAttribute="trailing" secondItem="Pk9-u7-Ekq" secondAttribute="trailingMargin" id="m9I-YF-GFD"/>
                             <constraint firstItem="LVC-0P-eg5" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="8" id="o2A-Qu-E0l"/>
                             <constraint firstItem="WDk-bU-2CR" firstAttribute="trailing" secondItem="cOj-Mk-Rhc" secondAttribute="trailing" id="o7y-hD-dad"/>
+                            <constraint firstItem="kd2-vq-Ncy" firstAttribute="top" secondItem="XPb-Qo-3dG" secondAttribute="bottom" constant="8" id="oao-9A-Gxk"/>
                             <constraint firstAttribute="centerX" secondItem="WkQ-Hl-tdx" secondAttribute="centerX" constant="-1" id="rMP-TY-7aP"/>
                             <constraint firstItem="WDk-bU-2CR" firstAttribute="top" secondItem="cOj-Mk-Rhc" secondAttribute="top" constant="97" id="slj-hO-vxg"/>
                             <constraint firstItem="mfC-fk-UX8" firstAttribute="top" secondItem="GSV-Ar-CGS" secondAttribute="bottom" constant="20" id="vvB-Hs-ceA"/>
@@ -927,6 +950,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bottomLeftRecovery" destination="cPZ-xK-8Q0" id="7Zg-ll-RUb"/>
+                        <outlet property="bottomRightRecovery" destination="GSV-Ar-CGS" id="84Q-XM-uii"/>
                         <outlet property="captureButton" destination="cOj-Mk-Rhc" id="qiF-cz-Bwe"/>
                         <outlet property="detailsTitleLabel" destination="nP4-iu-jkO" id="oYi-5O-BuV"/>
                         <outlet property="displayDetails" destination="F2J-bV-Zgy" id="a9b-c4-tII"/>
@@ -957,6 +982,7 @@
                         <outlet property="result8" destination="efY-5Y-x1L" id="DrD-B2-f0q"/>
                         <outlet property="result9" destination="sIf-Rr-NqT" id="mZN-1I-93F"/>
                         <outlet property="storeButton" destination="iaw-mq-tnX" id="fLO-Gt-Mxo"/>
+                        <outlet property="topRightRecovery" destination="kd2-vq-Ncy" id="oZt-kj-a61"/>
                         <outlet property="userButton" destination="WkQ-Hl-tdx" id="0D7-il-Pm5"/>
                     </connections>
                 </viewController>
@@ -976,7 +1002,6 @@
         <image name="homecapture" width="182" height="179"/>
         <image name="image" width="47" height="41"/>
         <image name="network" width="47" height="42"/>
-        <image name="off_button" width="20" height="9"/>
         <image name="photo-image" width="50" height="100"/>
         <image name="question1" width="258" height="26"/>
         <image name="question2" width="186" height="26"/>

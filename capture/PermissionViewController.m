@@ -42,7 +42,7 @@
             if (buttonIndex == 0)
             {
                 NSLog(@"You have clicked Cancel");
-                [self performSegueWithIdentifier:@"home" sender:self];
+                [self viewDidLoad];
             
             }
             else if(buttonIndex == 1)
@@ -59,7 +59,7 @@
             if (buttonIndex == 0)
             {
                 NSLog(@"You have clicked Cancel");
-                [self performSegueWithIdentifier:@"home" sender:self];
+                [self viewDidLoad];
 
             }
             else if(buttonIndex == 1)
@@ -75,7 +75,7 @@
             if (buttonIndex == 0)
             {
                 NSLog(@"You have clicked Cancel");
-                [self performSegueWithIdentifier:@"home" sender:self];
+                [self viewDidLoad];
 
             }
             else if(buttonIndex == 1)
@@ -97,14 +97,13 @@
             if (buttonIndex == 0)
             {
                 NSLog(@"You have clicked Cancel");
-                [self performSegueWithIdentifier:@"home" sender:self];
+                [self viewDidLoad];
 
             }
             else if(buttonIndex == 1)
             {
                 NSLog(@"You have clicked GOO");
-                 [self performSegueWithIdentifier:@"result" sender:self];
-            
+                [self viewDidLoad];
             }
         }
 }

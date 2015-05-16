@@ -77,11 +77,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *networkButton;
 @property (weak, nonatomic) IBOutlet UIButton *captureButton;
 @property (weak, nonatomic) IBOutlet UIButton *storeButton;
+@property (weak, nonatomic) IBOutlet UIButton *topRightRecovery;
+@property (weak, nonatomic) IBOutlet UIButton *bottomRightRecovery;
+@property (weak, nonatomic) IBOutlet UIButton *bottomLeftRecovery;
 
 @property (weak, nonatomic) IBOutlet UIView *imageButton;
 @property (weak, nonatomic) IBOutlet UIView *displayDetails;
 
 @property (nonatomic, retain) NSMutableDictionary *quotes;
+- (IBAction)topRightTouchUpInside:(id)sender;
+- (IBAction)bottomLeftTouchUpInside:(id)sender;
 
 - (IBAction)captureButtonTouchUpInside:(id)sender;
 - (IBAction)storeButtonTouchUpInside:(id)sender;
